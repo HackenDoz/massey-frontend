@@ -1,0 +1,15 @@
+<ion-view title="{{event.name}}">
+    <ion-content>
+        <div class="list card">
+            <div class="item item-avatar">
+                <img src="img/ionic.png">
+                <h2>{{event.name}}</h2>
+                <p>{{event.start | date : 'short'}} to {{event.end | date : 'short'}}</p>
+            </div>
+
+            <div class="item item-text-wrap">
+                <p>{{event.description}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

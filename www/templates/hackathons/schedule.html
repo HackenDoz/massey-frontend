@@ -1,0 +1,18 @@
+<ion-view view-title="Schedule">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="show()" ng-show="hackathon.admin">
+            <i class="icon ion-plus-circled"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <div class="list card" ng-repeat="day in days | toArray | orderBy:'$key'">
+            <div class="item item-divider">
+                {{day.$key | date : "mediumDate"}}
+            </div>
+            <a class="item" ng-repeat="event in day | orderBy:'start'" ui-sref="app.event({id: event.id})">
+                {{event.name}}
+                <p>{{event.start | date : "shortTime"}}</p>
+            </a>
+        </div>
+    </ion-content>
+</ion-view>

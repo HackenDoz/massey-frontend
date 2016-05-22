@@ -1,0 +1,17 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Hackathons</h1>
+        <div class="buttons">
+            <button class="button button-primary" ng-click="closeHackathon()">Close</button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="h in hackathons" ng-click="doHackathon(h.id)" class="item-avatar-left">
+                <img src="img/ionic.png">
+                <h2>{{h.name}}</h2>
+                <p>{{h.start_time | date}} to {{h.end_time | date}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-modal-view>

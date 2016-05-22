@@ -1,0 +1,21 @@
+.pull-down {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.pull-right {
+    float: right;
+}
+
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+.center-text {
+    text-align: center;
+}
+
+.logo {
+    padding-top: 2em;
+}

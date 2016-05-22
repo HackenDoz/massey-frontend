@@ -1,0 +1,31 @@
+<ion-view title="{{hackathon.name}}">
+    <ion-content>
+        <img src="img/ionic.png" class="logo center">
+        <h1 class="center-text">{{(left / 3600000)|number:0}}:{{(left / 60000 % 60)|number:0}}:{{(left / 1000 % 60)|number:0}}</h1>
+        <p class="center-text">Remaining Time</p>
+
+        <div class="list card">
+            <div class="item item-divider">
+                Upcoming Events
+            </div>
+            <div class="item" ng-show="events.length == 0">
+                No upcoming events.
+            </div>
+            <a class="item" ng-repeat="event in events | filter:upcomingEvents | orderBy:start | limitTo:5" ui-sref="app.event({id: event.id})">
+                {{event.name}}
+                <p>{{event.start | date : "shortTime"}}</p>
+            </a>
+            <div class="item item-divider">
+                Recent Announcements
+            </div>
+            <div class="item" ng-show="announcements.length == 0">
+                No recent announcements.
+            </div>
+            <div class="item" ng-repeat="a in announcements | orderBy:'-time' | limitTo:5">
+                <p class="pull-right">{{a.time | date : 'shortTime'}}</p>
+                <h2>{{a.title}}</h2>
+                <p>{{a.message}}</p>
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

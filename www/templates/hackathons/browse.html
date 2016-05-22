@@ -1,0 +1,15 @@
+<ion-view view-title="All Hackathons">
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="h in hackathons" class="item-thumbnail-left">
+                <img src="img/ionic.png">
+                <h2>{{h.name}}</h2>
+                <p>{{h.description}}</p>
+                <ion-option-button class="button-positive"
+                                   ng-click="join(h.id)">
+                    Join
+                </ion-option-button>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

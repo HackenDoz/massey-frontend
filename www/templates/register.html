@@ -1,0 +1,50 @@
+<ion-header-bar>
+    <h1 class="title">{{form}}</h1>
+</ion-header-bar>
+<ion-content class="has-header">
+    <form ng-submit="register()" ng-show="form == 'Register'">
+        <div class="list">
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Username</span>
+                <input type="text" placeholder="Username" ng-model="registerData.username">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Name</span>
+                <input type="text" placeholder="Name" ng-model="registerData.name">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Email</span>
+                <input type="email" placeholder="Email" ng-model="registerData.email">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Password</span>
+                <input type="password" placeholder="Password" ng-model="registerData.password">
+            </label>
+            <label class="item item-input item-floating-label">
+                <span class="input-label">Confirm Password</span>
+                <input type="password" placeholder="Confirm Password" ng-model="registerData.cpassword">
+            </label>
+            <div class="padding">
+                <button class="button button-block button-positive">
+                    Create Account
+                </button>
+            </div>
+        </div>
+        <a ng-click="switch()">Have an account? Log in.</a>
+    </form>
+    <form ng-submit="login()" ng-show="form == 'Login'">
+        <div class="list">
+            <label class="item item-input">
+                <span class="input-label">Username</span>
+                <input type="text" ng-model="loginData.username">
+            </label>
+            <label class="item item-input">
+                <span class="input-label">Password</span>
+                <input type="password" ng-model="loginData.password">
+            </label>
+            <label class="item">
+                <button class="button button-block button-positive" type="submit">Log in</button>
+            </label>
+        </div>
+    </form>
+</ion-content>

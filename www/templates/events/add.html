@@ -1,0 +1,33 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Add Event</h1>
+        <div class="buttons">
+            <button class="button button-primary" ng-click="close()"><i class="ion ion-close"></i></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="add()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Name</span>
+                    <input type="text" ng-model="formData.name">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Description</span>
+                    <input type="text" ng-model="formData.description">
+                </label>
+                <div class="item item-input" ion-datetime-picker ng-model="formData.start">
+                    <span class="input-label">Start Time</span>
+                    {{formData.start | date:"yyyy-MM-dd H:mm"}}
+                </div>
+                <div class="item item-input" ion-datetime-picker ng-model="formData.end">
+                    <span class="input-label">End Time</span>
+                    {{formData.end | date:"yyyy-MM-dd H:mm"}}
+                </div>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Add Event</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>

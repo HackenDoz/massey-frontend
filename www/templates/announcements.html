@@ -1,0 +1,16 @@
+<ion-view view-title="Announcements">
+    <ion-nav-buttons side="right">
+        <button class="button button-clear" ng-click="show()" ng-show="hackathon.admin">
+            <i class="icon ion-plus-circled"></i>
+        </button>
+    </ion-nav-buttons>
+    <ion-content>
+        <ion-list>
+            <ion-item ng-repeat="a in announcements | orderBy:'-time'">
+                <p class="pull-right">{{a.time | date : 'shortTime'}}</p>
+                <h2>{{a.title}}</h2>
+                <p>{{a.message}}</p>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+</ion-view>

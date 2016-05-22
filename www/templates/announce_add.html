@@ -1,0 +1,25 @@
+<ion-modal-view>
+    <ion-header-bar>
+        <h1 class="title">Make Announcement</h1>
+        <div class="buttons">
+            <button class="button button-primary" ng-click="close()"><i class="ion ion-close"></i></button>
+        </div>
+    </ion-header-bar>
+    <ion-content>
+        <form ng-submit="add()">
+            <div class="list">
+                <label class="item item-input">
+                    <span class="input-label">Title</span>
+                    <input type="text" ng-model="formData.title">
+                </label>
+                <label class="item item-input">
+                    <span class="input-label">Message</span>
+                    <input type="text" ng-model="formData.message">
+                </label>
+                <label class="item">
+                    <button class="button button-block button-positive" type="submit">Announce</button>
+                </label>
+            </div>
+        </form>
+    </ion-content>
+</ion-modal-view>
