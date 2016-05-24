@@ -69,6 +69,7 @@ angular.module('app', ['ionic', 'ionic.service.core', 'ion-datetime-picker', 'ap
             })
             .state('app.announcements', {
                 url: '/announcements',
+                cache: false,
                 views: {
                     'menuContent': {
                         templateUrl: 'templates/announcements.html',

@@ -148,7 +148,6 @@ angular.module('app.controllers', ['app.factories'])
             if ($scope.hackathon != undefined) {
                 $scope.events = $scope.hackathon.events;
                 $scope.left = $scope.hackathon.end - Date.now();
-                console.log($scope.hackathon.end);
                 $http.post(url + '/hackathon/announcements/list', {
                     hackathon_id: $scope.hackathon.id
                 }).success(function(data) {
